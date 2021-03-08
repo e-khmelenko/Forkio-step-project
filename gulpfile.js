@@ -5,6 +5,7 @@ const gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css'),
     imagemin = require('gulp-imagemin'),
     sass = require("gulp-sass"),
+    purgecss = require('gulp-purgecss'),
     browserSync = require("browser-sync").create();
 
 sass.compiler = require("node-sass");
@@ -12,9 +13,9 @@ sass.compiler = require("node-sass");
 const paths = {
     html: "./index.html",
     src: {
-        scss: "./src/scss/**/*.scss",
-        js: "./src/js/*.js",
-        img: "./src/img/*",
+        scss: "./src/**/*.scss",
+        js: "./src/**/*.js",
+        img: "./src/**/*[.jpeg,.png,.svg]",
     },
     build: {
         css: "dist/css/",
@@ -24,26 +25,38 @@ const paths = {
     },
 };
 
-const buildJS = () =>
-    gulp
-        .src(paths.src.js)
-        .pipe(concat("script.js"))
-        .pipe(gulp.dest(paths.build.js))
-        .pipe(browserSync.stream());
 
-const buildCSS = () =>
-    gulp
-        .src(paths.src.scss)
+const uglifyJS = () => (
+    gulp.src(paths.src.js)
+        .pipe(uglify())
+        .pipe(gulp.dest("./src/js/"))
+);
+
+const buildJS = () => (
+    gulp.src(paths.src.js)
+        .pipe(concat("script.min.js"))
+        .pipe(gulp.dest(paths.build.js))
+        .pipe(browserSync.stream())
+);
+
+const CleanCSS = () => (
+    gulp.src('styles/*.css')
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(gulp.dest('dist'))
+);
+const buildCSS = () => (
+    gulp.src(paths.src.scss)
         .pipe(sass().on("error", sass.logError))
         .pipe(gulp.dest(paths.build.css))
-        .pipe(browserSync.stream());
+        .pipe(browserSync.stream())
+);
 
-const buildIMG = () =>
-    gulp
-        .src(paths.src.img)
+const buildIMG = () => (
+    gulp.src(paths.src.img)
         .pipe(imagemin())
         .pipe(gulp.dest(paths.build.img))
-        .pipe(browserSync.stream());
+        .pipe(browserSync.stream())
+);
 
 const cleanBuild = () =>
     gulp.src(paths.build.self, {allowEmpty: true}).pipe(clean());
