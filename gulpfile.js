@@ -6,16 +6,18 @@ const gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     sass = require("gulp-sass"),
     purgecss = require('gulp-purgecss'),
+    autoprefixer = require('gulp-autoprefixer'),
     browserSync = require("browser-sync").create();
 
 sass.compiler = require("node-sass");
+
 
 const paths = {
     html: "./index.html",
     src: {
         scss: "./src/**/*.scss",
         js: "./src/**/*.js",
-        img: "./src/**/*[.jpeg,.png,.svg]",
+        img: "./src/**/*.png",
     },
     build: {
         css: "dist/css/",
@@ -25,6 +27,11 @@ const paths = {
     },
 };
 
+// const autoprefixer = () => (
+//     gulp.src('src/app.css')
+//
+//         .pipe(gulp.dest('dist'))
+// )
 
 const uglifyJS = () => (
     gulp.src(paths.src.js)
@@ -39,14 +46,25 @@ const buildJS = () => (
         .pipe(browserSync.stream())
 );
 
+const purgeCSS = () => (
+    gulp.src('dist/css/*.css')
+        .pipe(purgecss({
+            content: ['./**/*.html']
+        }))
+        .pipe(gulp.dest('dist/css'))
+)
 const CleanCSS = () => (
-    gulp.src('styles/*.css')
+    gulp.src('dist/*.css')
         .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('dist/css'))
 );
 const buildCSS = () => (
     gulp.src(paths.src.scss)
-        .pipe(sass().on("error", sass.logError))
+        .pipe(sass({outputStyle: 'compressed'}).on("error", sass.logError))
+        .pipe(autoprefixer({
+            cascade: false
+        }))
+        .pipe(concat('style.min.css'))
         .pipe(gulp.dest(paths.build.css))
         .pipe(browserSync.stream())
 );
@@ -61,7 +79,7 @@ const buildIMG = () => (
 const cleanBuild = () =>
     gulp.src(paths.build.self, {allowEmpty: true}).pipe(clean());
 
-const build = gulp.series(buildCSS, buildJS);
+const build = gulp.series(buildCSS,purgeCSS, uglifyJS, buildJS);
 
 const watcher = () => {
     browserSync.init({
@@ -79,9 +97,9 @@ const watcher = () => {
 gulp.task("clean", cleanBuild);
 gulp.task("buildCSS", buildCSS);
 gulp.task("buildJS", buildJS);
+gulp.task("buildIMG", buildIMG);
+gulp.task("CleanCSS", CleanCSS);
+gulp.task("dev", watcher);
 
-gulp.task(
-    "default",
-    gulp.series(cleanBuild, gulp.parallel(buildIMG, build), watcher)
-);
+gulp.task("build", gulp.series(cleanBuild, gulp.parallel(buildIMG, build)));
 
