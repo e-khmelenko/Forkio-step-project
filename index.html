@@ -9,36 +9,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dist/css/main.css">
+    <link rel="stylesheet" href="dist/css/style.min.css">
     <title>Forkio</title>
 </head>
 <body>
 <header class="hero">
-    <div class="hero__nav">
-        <div class="hero__logo">
+    <div class="hero__nav container">
+        <a href="#" class="hero__logo">
             <img src="dist/img/header/img/logo.png" alt="logo" class="hero__logo-img">
-            <h1 class="hero__logo-title"></h1>
-        </div>
+            <h1 class="hero__logo-title">Forkio</h1>
+        </a>
+        <button class="btn__buy-now">Buy Now</button>
+        <button class="hamburger__icon">
+            <span class="hamburger__line"></span>
+        </button>
         <ul class="nav-menu__list">
-            <li class="nav-menu__item"></li>
-            <li class="nav-menu__item"></li>
-            <li class="nav-menu__item"></li>
-            <li class="nav-menu__item"></li>
+            <li class="nav-menu__item">Overview</li>
+            <li class="nav-menu__item">About Fork</li>
+            <li class="nav-menu__item">Buying Options</li>
+            <li class="nav-menu__item">Support</li>
         </ul>
-        <button class="btn__buy-now"></button>
     </div>
 
-    <div class="hero__bg">
-        <h1 class="hero__title"></h1>
-        <p class="hero__subtitle"></p>
-        <p class="hero__version"></p>
-        <button class="btn__download"></button>
+    <div class="hero__bg container">
+        <h1 class="hero__title">Fork App</h1>
+        <p class="hero__subtitle">A Real Gamechanger In The World Of Web-Development</p>
+        <p class="hero__version">v. 2.8 For Mac and Windows</p>
+        <button class="btn__download">Download For Free Now</button>
     </div>
+        <p class="hero__trial">Unlimited 30-Days Trial Period</p>
 </header>
 
 <main class="page">
     <section class="app-description container">
-        <p class="app-description__trial"></p>
         <h2 class="app-description__title"></h2>
         <p class="app-description__description"></p>
         <div class="contact-btns">
@@ -147,5 +150,6 @@
         </div>
     </section>
 </main>
+<script src="dist/js/script.min.js"></script>
 </body>
 </html>

@@ -1,11 +1,166 @@
-.hero{
-  &__bg{
-    background-color: #000;
+.hero {
+
+  &__nav {
+    background-color: #27262A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  &__title{
+
+  &__logo-title {
+    display: none;
+  }
+
+
+  &__bg {
+    background-image: url(../img/header/img/laptop.png);
+  }
+
+  &__title {
+
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 48px;
+
+    padding-top: 50px;
 
   }
+  &__subtitle{
+    font-size: 18px;
+    line-height: 24px;
+    color: #8D81AC;
 
-  width: 100%;
-  height: 100px;
+    padding-top: 19px;
+  }
+  &__version{
+    font-size: 14px;
+    line-height: 14px;
+    color: #848E97;
+    text-transform: uppercase;
+    padding-top: 14px;
+  }
+  &__trial{
+    font-size: 14px;
+    line-height: 14px;
+    color: #848E97;
+
+    margin-top: 48px;
+  }
+  @include Montserrat;
+  text-align: center;
+
+}
+
+
+.nav-menu {
+  &__list {
+    display: block;
+    position: fixed;
+    width: 292px;
+    left: calc(50% - 292px / 2);
+    top: -100vh;
+    transition: all 300ms ease-in-out;
+  }
+
+  &__active {
+    position: fixed;
+    top: 103px;
+  }
+
+  &__item {
+    display: block;
+    position: relative;
+    text-align: start;
+    background-color: #333333;
+    padding: 29px 0 21px 35px;
+    @include Montserrat;
+    color: #fff;
+    font-size: 26px;
+    line-height: 26px;
+    border-bottom: 2px solid #3b3b3b;
+  }
+
+  &__item:hover {
+    color: #8D81AC;
+  }
+
+  &__item:hover:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: calc(40px - 50px / 2);
+    width: 8px;
+    height: 50px;
+    background-color: #8D81AC;
+  }
+}
+
+.btn {
+  &__buy-now {
+    @include btn;
+    padding: 11px 10px;
+    margin: 34px 0 32px 0;
+
+  }
+  &__download{
+    @include btn;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 13px 29px;
+    margin-top: 394px;
+
+    position: relative;
+    top: 23px;
+  }
+    @include Montserrat;
+}
+
+.hamburger {
+  &__icon {
+    width: 26px;
+    height: 21px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+    padding: 0;
+  }
+
+  &__line, &__line:after, &__line:before {
+    display: block;
+    position: absolute;
+    border-radius: 1px;
+    width: 26px;
+    height: 3px;
+    font-size: 0;
+    background-color: #fff;
+    transition: all 0.3s;
+  }
+
+  &__line:after {
+    content: '';
+    top: 6px;
+  }
+
+  &__line:before {
+    content: '';
+    width: 13px;
+    left: 13px;
+    top: -6px;
+  }
+
+  &__active {
+    transform: rotate(45deg);
+
+    &:before {
+      opacity: 0;
+    }
+  }
+
+  &__active:after {
+    top: 0;
+    transform: rotate(-90deg);
+  }
 }
