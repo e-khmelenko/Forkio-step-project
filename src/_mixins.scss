@@ -7,10 +7,16 @@
 @mixin btn{
   border-radius: 40px;
   background-color: #8D81AC;
-  border: none;
+  border: #8D81AC solid 2px;
   outline: none;
   font-weight: bold;
 
+  cursor: pointer;
   color: #fff;
 
+  &:hover{
+    background-color: #fff;
+    border: #8D81AC solid 2px;
+    color: #8D81AC;
+  }
 }

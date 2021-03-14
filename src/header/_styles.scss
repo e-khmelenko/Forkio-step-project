@@ -7,12 +7,19 @@
     align-items: center;
     flex-wrap: wrap;
     @media (min-width: 993px) {
+      flex-wrap: nowrap;
       background-color: #000;
     }
   }
 
   &__logo {
     display: flex;
+  }
+  &__logo:hover> .hero__logo-title{
+    color: #fff;
+  }
+  &__logo:hover> .hero__logo-img{
+    fill: #fff;
   }
 
   &__logo-title {
@@ -31,7 +38,7 @@
 
 
   &__bg {
-    background-image: url(../img/header/img/laptop.png);
+    background-image: url(../../dist/img/header/img/laptop.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -120,9 +127,8 @@
       justify-content: center;
     }
     @media (min-width: 993px) {
-      position: absolute;
-      top: 45px;
-      left: calc(50% - 500px);
+      order: 2;
+      width: auto;
     }
   }
 
@@ -151,7 +157,10 @@
       padding: 0 0 18px 29px;
       background-color: transparent;
       border: none;
-
+    }
+    @media (min-width: 993px){
+      padding: 0;
+      margin-left: 20px;
     }
   }
 
@@ -159,6 +168,7 @@
     color: #8D81AC;
     @media (min-width: 480px) {
       color: #fff;
+      cursor: pointer;
     }
   }
 
@@ -189,6 +199,10 @@
       font-size: 16px;
       line-height: 16px;
       padding: 11px 40px;
+    }
+    @media (min-width: 993px) {
+      //justify-self: stretch;
+      order: 3;
     }
 
   }
