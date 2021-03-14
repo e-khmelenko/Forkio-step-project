@@ -14,4 +14,9 @@
   box-sizing: border-box;
   padding: 0 10px;
   margin: 0 auto;
+
+  @media (min-width: 1201px){
+    width: 1200px;
+
+  }
 }
