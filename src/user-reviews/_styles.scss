@@ -3,11 +3,18 @@
     background-image: url(../img/user-reviews/img/rocks.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
   }
 
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr;
+    @media (min-width: 481px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 993px){
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 
   &__title {
@@ -24,6 +31,7 @@
   &__card {
 
     text-align: center;
+    align-self: end;
   }
 
   &__img-title {
@@ -38,6 +46,8 @@
     line-height: 24px;
     color: #ffffff;
     margin-top: 33px;
+    @media (min-width: 480px){
+    }
   }
 
   &__info {
