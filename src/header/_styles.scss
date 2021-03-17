@@ -1,11 +1,273 @@
-.hero{
-  &__bg{
-    background-color: #000;
+.hero {
+
+  &__nav {
+    background-color: #27262A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    @media (min-width: 993px) {
+      flex-wrap: nowrap;
+      background-color: #000;
+    }
   }
-  &__title{
+
+  &__logo {
+    display: flex;
+  }
+  &__logo:hover> .hero__logo-title{
+    color: #fff;
+  }
+  &__logo:hover> .hero__logo-img{
+    fill: #fff;
+  }
+
+  &__logo-title {
+    display: none;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #8D81AC;
+    margin-left: 17px;
+    align-self: center;
+    @media (min-width: 480px) {
+      display: inline;
+    }
+  }
+
+
+  &__bg {
+    background-image: url(../../dist/img/header/img/laptop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__title {
+
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 48px;
+
+    padding-top: 50px;
+    @media (min-width: 480px) {
+      font-size: 72px;
+      line-height: 72px;
+    }
+    @media (min-width: 993px) {
+      font-size: 82px;
+      line-height: 82px;
+    }
 
   }
 
-  width: 100%;
-  height: 100px;
+  &__subtitle {
+    font-size: 18px;
+    line-height: 24px;
+    color: #8D81AC;
+
+    padding-top: 19px;
+
+    @media (min-width: 480px) {
+      font-size: 24px;
+      @include Lato;
+
+    }
+    @media (min-width: 993px) {
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+
+  &__version {
+    font-size: 14px;
+    line-height: 14px;
+    color: #848E97;
+    text-transform: uppercase;
+    padding-top: 14px;
+    @media (min-width: 993px) {
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+
+  &__trial {
+    font-size: 14px;
+    line-height: 14px;
+    color: #848E97;
+
+    margin-top: 48px;
+  }
+
+  @include Montserrat;
+  text-align: center;
+
+}
+
+.breakpoint {
+  display: none;
+  @media (min-width: 480px) {
+    display: block;
+  }
+}
+
+.nav-menu {
+  &__list {
+    position: fixed;
+    width: 292px;
+    left: calc(50% - 292px / 2);
+    top: -100vh;
+    transition: all 300ms ease-in-out;
+    @media (min-width: 480px) {
+      position: inherit;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    @media (min-width: 993px) {
+      order: 2;
+      width: auto;
+    }
+  }
+
+  &__active {
+    position: fixed;
+    top: 103px;
+  }
+
+  &__item {
+    display: block;
+    position: relative;
+    text-align: start;
+    background-color: #333333;
+    padding: 29px 0 21px 35px;
+    @include Montserrat;
+    color: #fff;
+    font-size: 26px;
+    line-height: 26px;
+    border-bottom: 2px solid #3b3b3b;
+    @media (min-width: 480px) {
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 18px;
+      color: #8D81AC;
+
+      padding: 0 0 18px 29px;
+      background-color: transparent;
+      border: none;
+    }
+    @media (min-width: 993px){
+      padding: 0;
+      margin-left: 20px;
+    }
+  }
+
+  &__item:hover {
+    color: #8D81AC;
+    @media (min-width: 480px) {
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
+  &__item:hover:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: calc(40px - 50px / 2);
+    width: 8px;
+    height: 50px;
+    background-color: #8D81AC;
+    @media (min-width: 480px) {
+      display: none;
+    }
+  }
+}
+
+.btn {
+  &__buy-now {
+    @include btn;
+    padding: 11px 10px;
+    margin: 34px 0 32px 0;
+    font-size: 15px;
+    line-height: 15px;
+    @media (min-width: 480px) {
+      position: relative;
+      font-size: 16px;
+      line-height: 16px;
+      padding: 11px 40px;
+    }
+    @media (min-width: 993px) {
+      //justify-self: stretch;
+      order: 3;
+    }
+
+  }
+
+  &__download {
+    @include btn;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 13px 29px;
+    margin-top: 394px;
+
+    position: relative;
+    top: 23px;
+  }
+
+  @include Montserrat;
+}
+
+.hamburger {
+  &__icon {
+    width: 26px;
+    height: 21px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+    padding: 0;
+    @media (min-width: 480px) {
+      display: none;
+    }
+  }
+
+  &__line, &__line:after, &__line:before {
+    display: block;
+    position: absolute;
+    border-radius: 1px;
+    width: 26px;
+    height: 3px;
+    font-size: 0;
+    background-color: #fff;
+    transition: all 0.3s;
+  }
+
+  &__line:after {
+    content: '';
+    top: 6px;
+  }
+
+  &__line:before {
+    content: '';
+    width: 13px;
+    left: 13px;
+    top: -6px;
+  }
+
+  &__active {
+    transform: rotate(45deg);
+
+    &:before {
+      opacity: 0;
+    }
+  }
+
+  &__active:after {
+    top: 0;
+    transform: rotate(-90deg);
+  }
 }
