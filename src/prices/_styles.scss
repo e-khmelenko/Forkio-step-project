@@ -1,0 +1,145 @@
+.prices {
+  &__bg {
+    background-image: url("../../dist/img/prices/img/bg-price.png");
+    width: 100%;
+    background-size: cover;
+
+  }
+
+  &__card-wrapper {
+    width: 257px;
+    padding: 0 10px;
+    margin: 0 auto;
+    @media (min-width: 481px) {
+      width: 480px;
+      display: flex;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+      padding: 0 5px;
+    }
+    @media (min-width: 993px) {
+      display: flex;
+      width: 992px;
+    }
+
+  }
+
+  &__card {
+    background-color: rgba(141, 129, 172, 0.23);
+    height: 457px;
+    width: 257px;
+    margin: 18px auto;
+    @media (min-width: 481px) {
+      height: 457px;
+      flex: 2;
+      margin: 20px 10px;
+    }
+    @media (min-width: 993px) {
+      flex: 1 1;
+      margin-bottom: 65px;
+    }
+  }
+
+  &__card:nth-child(3) {
+    background-color: rgba(70, 48, 72, 0.84);
+    transform: scale(1.1);
+    margin: 45px 0;
+    @media (min-width: 481px) {
+      margin-top: 20px;
+      margin-right: 20px;
+    }
+
+    @media (min-width: 993px) {
+      margin: 20px 30px;
+      transform: scale(1.2);
+    }
+  }
+
+  &__card-title {
+    color: #FFFFFF;
+    font-size: 24px;
+    line-height: 24px;
+    @include Montserrat;
+    text-align: center;
+    background-color: rgba(141, 129, 172, 0.23);
+    padding: 36px 0;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+
+  }
+
+  &__card-price {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    @include Montserrat;
+    color: #FFFFFF;
+    font-size: 60px;
+    line-height: 62px;
+  }
+
+
+  &__card-validity {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    margin-top: 20px;
+    @include Montserrat;
+  }
+
+  &__card-validity:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 5px;
+    background: #8D81AC;
+    margin: 38px auto;
+  }
+
+  &__card-type-of-product {
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    @include Montserrat;
+    margin-bottom: 37px;
+    padding: 0 13px;
+
+  }
+
+}
+
+
+.btn {
+  &__purchase {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 15px;
+    display: flex;
+    margin: 0 auto;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: rgba(141, 129, 172, 0.15);
+    border-radius: 47px;
+    border: none;
+    padding: 15px 38px 15px 38px;
+    @include Montserrat;
+
+  }
+
+
+  &__media {
+    @media (min-width: 481px) {
+      margin-top: 55px;
+    }
+  }
+}
+
+
