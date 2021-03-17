@@ -33,14 +33,9 @@ const paths = {
 //         .pipe(gulp.dest('dist'))
 // )
 
-const uglifyJS = () => (
-    gulp.src(paths.src.js)
-        .pipe(uglify())
-        .pipe(gulp.dest("./src/js/"))
-);
-
 const buildJS = () => (
     gulp.src(paths.src.js)
+        .pipe(uglify())
         .pipe(concat("script.min.js"))
         .pipe(gulp.dest(paths.build.js))
         .pipe(browserSync.stream())
@@ -79,7 +74,7 @@ const buildIMG = () => (
 const cleanBuild = () =>
     gulp.src(paths.build.self, {allowEmpty: true}).pipe(clean());
 
-const build = gulp.series(buildCSS,purgeCSS, uglifyJS, buildJS);
+const build = gulp.series(buildCSS,purgeCSS, buildJS);
 
 const watcher = () => {
     browserSync.init({

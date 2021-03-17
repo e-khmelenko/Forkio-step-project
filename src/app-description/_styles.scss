@@ -1,0 +1,75 @@
+
+.app-description {
+  &__description {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 10px;
+    color: #323232;
+    text-align: center;
+    margin-bottom: 36px;
+    @include Lato;
+
+  }
+
+  &__trial {
+    font-size: 14px;
+    line-height: 14px;
+    color: #848E97;
+    text-align: center;
+    @include Montserrat;
+
+  }
+
+
+  &__title {
+    @include Montserrat;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 28px;
+    text-align: center;
+    padding-right: 15px;
+    text-transform: uppercase;
+    color: #635C73;
+    margin-top: 79px;
+    margin-bottom: 27px;
+  }
+}
+
+.btn {
+  &__contacts {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    //width: 251px;
+  }
+
+
+  &__img {
+    width: 17px;
+    height: 20px;
+    padding-right: 5px;
+
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin: 10px 10px;
+    border: 1px solid gray;
+
+  }
+
+
+  &__number {
+    border-left: 1px solid gray;
+    padding: 5px;
+    margin-left: 10px;
+
+
+  }
+
+}
+
