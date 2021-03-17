@@ -4,16 +4,29 @@
 @import "_mixins.scss";
 
 @import "./header/_styles.scss";
-@import "./app-decription/_styles.scss";
+@import "./app-description/_styles.scss";
 @import "./app-opportunities/_styles.scss";
 @import "./user-reviews/_styles.scss";
 @import "./prices/_styles.scss";
+
+a{
+  text-decoration: none;
+}
 
 .container{
   width: 100%;
   box-sizing: border-box;
   padding: 0 10px;
   margin: 0 auto;
+  @media (min-width: 993px) {
+    padding: 0 90px;
+
+  }
+  @media (min-width: 1201px) {
+    width: 1200px;
+    padding: 0 90px;
+
+  }
 
   @media (min-width: 1201px){
     width: 1200px;
