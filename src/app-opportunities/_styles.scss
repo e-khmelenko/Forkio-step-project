@@ -1,0 +1,118 @@
+.app-opportunities {
+  &__bg {
+    @media (min-width: 993px){
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    padding-right: 10px;
+    margin: 0 auto;
+  }
+}
+.card{
+  @media (min-width: 481px){
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  &__title-head {
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    color: #8D81AC;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 120px;
+    @media (min-width: 993px){
+      display: none;
+    }
+  }
+
+  &__img {
+    margin: 36px auto;
+    display: flex;
+    @media (min-width: 481px) {
+      //margin: 36px;
+    }
+  }
+
+  &__content{
+    @media (min-width: 481px) {
+      width: 372px;
+    }
+    @media (min-width: 680px) {
+      width: 467px;
+    }
+    @media (min-width: 891px) {
+      width: 693px;
+    }
+    @media (min-width: 993px) {
+      width:467px;
+    }
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    color: #323232;
+    text-align: center;
+    margin-top: 27px;
+    margin-bottom: 14px;
+    @include Montserrat;
+    @media (min-width: 481px) {
+      text-align: left;
+      margin-left: 20px;
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 21px;
+    padding-right: 20px;
+    padding-left: 20px;
+    color: #848E97;
+    text-align: center;
+    @media (min-width: 481px) {
+      text-align: left;
+    }
+
+  }
+}
+
+
+.app-opportunities-example {
+  &__title {display: none;
+    @media (min-width: 993px){
+      display: block;
+      text-align: left;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 38px;
+      color: #8D81AC;
+    }
+  }
+
+  &__img {
+    margin-top: 64px;
+    @media (min-width: 700px) {
+      float: right;
+    }
+    @media (min-width: 700px){
+      margin-top: 1px;
+    }
+  }
+
+}
+
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
