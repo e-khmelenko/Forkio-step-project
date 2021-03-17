@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dist/css/main.css">
+    <!--    <link rel="stylesheet" href="dist/css/main.css">-->
+    <link rel="stylesheet" href="dist/css/style.min.css">
     <title>Forkio</title>
 </head>
 <body>
@@ -38,45 +39,71 @@
 
 <main class="page">
     <section class="app-description container">
-        <p class="app-description__trial"></p>
         <h2 class="app-description__title"></h2>
         <p class="app-description__description"></p>
-        <div class="contact-btns">
-            <button class="btn__watch"></button>
-            <button class="btn__star"></button>
-            <button class="btn__fork"></button>
+        <div class="btn__contacts">
+            <button class="btn__icon"><img src="dist/img/app-decription/img/eye.png" alt="pic" class="btn__img"> Watch
+                <span class="btn__number">1,397</span>
+            </button>
+            <button class="btn__icon"><img src="dist/img/app-decription/img/star.png" alt="pic" class="btn__img"> Star
+                <span class="btn__number">21,038</span>
+            </button>
+            <button class="btn__icon"><img src="dist/img/app-decription/img/fork.png" alt="pic" class="btn__img">Fork
+                <span class="btn__number">4,391</span>
+            </button>
         </div>
     </section>
 
 
     <section class="app-opportunities__bg">
         <div class="app-opportunities__wrapper">
+
+
+            <h3 class="card__title-head"><span><</span>Here is what you get<span>></span></h3>
             <div class="card">
-                <img src="" alt="" class="card__img">
-                <h3 class="card__title"></h3>
-                <p class="card__description"></p>
+                <img src="dist/img/app-opportunities/img/icon1.png" alt="pic" class="card__img">
+                <div class="card__content ">
+                    <h3 class="card__title">Creatred to Make The Web Better</h3>
+                    <p class="card__description">Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet
+                        vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue.</p>
+                </div>
             </div>
             <div class="card">
-                <img src="" alt="" class="card__img">
-                <h3 class="card__title"></h3>
-                <p class="card__description"></p>
+                <img src="dist/img/app-opportunities/img/icon2.png" alt="pic" class="card__img">
+                <div class="card__content ">
+                    <h3 class="card__title">Incredibly Powerful Tool</h3>
+                    <p class="card__description">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio,
+                        ut
+                        volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat
+                        volutpat.</p>
+                </div>
             </div>
             <div class="card">
-                <img src="" alt="" class="card__img">
-                <h3 class="card__title"></h3>
-                <p class="card__description"></p>
+                <img src="dist/img/app-opportunities/img/icon3.png" alt="pic" class="card__img">
+                <div class="card__content ">
+                    <h3 class="card__title ">Experimental Stuff</h3>
+                    <p class="card__description">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio,
+                        ut
+                        volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat
+                        volutpat.</p>
+                </div>
             </div>
             <div class="card">
-                <img src="" alt="" class="card__img">
-                <h3 class="card__title"></h3>
-                <p class="card__description"></p>
+                <img src="dist/img/app-opportunities/img/icon4.png" alt="pic" class="card__img">
+                <div class="card__content ">
+                    <h3 class="card__title">Creatred to Make The Web Better</h3>
+                    <p class="card__description">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio,
+                        ut
+                        volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat
+                        volutpat.</p>
+                </div>
             </div>
         </div>
 
 
-        <div class="app-opportunities-example">
-            <h2 class="app-opportunities-example__title"></h2>
-            <img src="" alt="" class="app-opportunities-example__img">
+        <div class="app-opportunities-example clear">
+            <h2 class="app-opportunities-example__title"><span><</span>Here is what you get<span>></span></h2>
+            <img src="dist/img/app-opportunities/img/editor.png" alt="pic" class="app-opportunities-example__img">
         </div>
     </section>
 
@@ -114,38 +141,41 @@
 
 
     <section class="prices">
-        <h2 class="prices__title"></h2>
+
+        <h2 class="prices__title">Fork Subscription Pricing</h2>
         <div class="prices__card-wrapper">
             <div class="prices__card">
-                <p class="prices__card-title"></p>
-                <span class="prices__card-price"></span>
-                <span class="prices__card-validity"></span>
-                <span class="prices__card-type-of-product"></span>
-                <button class="btn__purchase"></button>
+                <p class="prices__card-title">Students</p>
+                <span class="prices__card-price">$29</span>
+                <span class="prices__card-validity">per month</span>
+                <span class="prices__card-type-of-product">Personal License</span>
+                <button class="btn__purchase btn__media">purchase</button>
             </div>
             <div class="prices__card">
-                <p class="prices__card-title"></p>
-                <span class="prices__card-price"></span>
-                <span class="prices__card-validity"></span>
-                <span class="prices__card-type-of-product"></span>
-                <button class="btn__purchase"></button>
+                <p class="prices__card-title">professional</p>
+                <span class="prices__card-price">$59</span>
+                <span class="prices__card-validity">per Month</span>
+                <span class="prices__card-type-of-product">Professional License Email Support</span>
+                <button class="btn__purchase">purchase</button>
             </div>
             <div class="prices__card">
-                <p class="prices__card-title"></p>
-                <span class="prices__card-price"></span>
-                <span class="prices__card-validity"></span>
-                <span class="prices__card-type-of-product"></span>
-                <button class="btn__purchase"></button>
+                <p class="prices__card-title">agency</p>
+                <span class="prices__card-price">$99</span>
+                <span class="prices__card-validity">per month</span>
+                <span class="prices__card-type-of-product">1-12 Team Members Phone Support</span>
+                <button class="btn__purchase">purchase</button>
             </div>
-            <div class="prices__card__bg">
-                <p class="prices__card-title"></p>
-                <span class="prices__card-price"></span>
-                <span class="prices__card-validity"></span>
-                <span class="prices__card-type-of-product"></span>
-                <button class="btn__purchase"></button>
+            <div class="prices__card">
+                <p class="prices__card-title">enterprise</p>
+                <span class="prices__card-price">$159</span>
+                <span class="prices__card-validity">per month</span>
+                <span class="prices__card-type-of-product">Unlimited Team Members 24/ 7 Phone Support</span>
+                <button class="btn__purchase">purchase</button>
             </div>
         </div>
     </section>
+
+
 </main>
 </body>
 </html>
