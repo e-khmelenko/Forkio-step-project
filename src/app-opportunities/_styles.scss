@@ -1,8 +1,12 @@
 .app-opportunities {
   &__bg {
-
-    @media (min-width: 993px){
+    @media (min-width: $desktop) {
       background: #F4F4F4;
+    }
+  }
+
+  &__container {
+    @media (min-width: $desktop) {
       display: flex;
       justify-content: space-between;
       width: 100%;
@@ -15,27 +19,31 @@
     margin: 0 auto;
   }
 }
-.card{
-  @media (min-width: 481px){
+
+.card {
+  @media (min-width: $tablet) {
     display: flex;
     width: 100%;
     justify-content: space-between;
   }
+
   &__title-head {
+    @include MainFont;
+
     text-align: center;
     font-weight: bold;
     font-size: 32px;
     line-height: 38px;
-    color: #8D81AC;
+    color: $accentColor;
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 120px;
-    @media (min-width: 481px){
+    @media (min-width: $tablet) {
       font-weight: bold;
       font-size: 42px;
       line-height: 44px;
     }
-    @media (min-width: 993px){
+    @media (min-width: $desktop) {
       display: none;
     }
   }
@@ -43,13 +51,13 @@
   &__img {
     margin: 36px auto;
     display: flex;
-    @media (min-width: 481px) {
+    @media (min-width: $tablet) {
       //margin: 36px;
     }
   }
 
-  &__content{
-    @media (min-width: 481px) {
+  &__content {
+    @media (min-width: $tablet) {
       width: 372px;
     }
     @media (min-width: 680px) {
@@ -58,8 +66,8 @@
     @media (min-width: 891px) {
       width: 693px;
     }
-    @media (min-width: 993px) {
-      width:467px;
+    @media (min-width: $desktop) {
+      width: 467px;
     }
   }
 
@@ -73,20 +81,23 @@
     margin-top: 27px;
     margin-bottom: 14px;
     @include MainFont;
-    @media (min-width: 481px) {
+    @media (min-width: $tablet) {
       text-align: left;
       margin-left: 20px;
     }
   }
 
   &__description {
+    @include DescriptionFont;
+
     font-size: 14px;
     line-height: 21px;
     padding-right: 20px;
     padding-left: 20px;
-    color: #848E97;
+    color: $greyTextColor;
     text-align: center;
-    @media (min-width: 481px) {
+    @media (min-width: $tablet) {
+      @include MainFont;
       text-align: left;
     }
 
@@ -96,27 +107,26 @@
 
 .app-opportunities-example {
   overflow: hidden;
-  @media (min-width: 993px){
-overflow:visible;
+  @media (min-width: $ultraWide) {
+    overflow: visible;
   }
-  &__title {display: none;
-    @media (min-width: 993px){
+
+  &__title {
+    display: none;
+    @media (min-width: $desktop) {
       display: block;
       text-align: left;
       font-weight: bold;
       font-size: 48px;
       line-height: 50px;
-      color: #8D81AC;
+      color: $accentColor;
     }
   }
 
   &__img {
     margin-top: 64px;
-
-    @media (min-width: 700px) {
+    @media (min-width: $desktop) {
       float: right;
-    }
-    @media (min-width: 700px){
       margin-top: 1px;
     }
   }

@@ -1,18 +1,17 @@
 .user-reviews {
   &__bg {
     background-image: url(../../dist/img/user-reviews/img/rocks.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    @include img-background;
+    background-color: #4B3B4E;
   }
 
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    @media (min-width: 481px) {
+    @media (min-width: $tablet) {
       grid-template-columns: 1fr 1fr;
     }
-    @media (min-width: 993px) {
+    @media (min-width: $desktop) {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }

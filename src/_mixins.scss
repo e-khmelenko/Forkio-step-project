@@ -4,6 +4,11 @@
 @mixin MainFont{
   font-family: 'MainFont', sans-serif ;
 }
+@mixin img-background{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 @mixin section-title{
   font-size: 36px;

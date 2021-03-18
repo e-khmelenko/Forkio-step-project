@@ -1,9 +1,7 @@
 .prices {
   &__bg {
     background-image: url("../../dist/img/prices/img/bg-price.png");
-    width: 100%;
-    background-size: cover;
-
+    @include img-background;
   }
 
   &__title {
@@ -16,14 +14,14 @@
     width: 257px;
     padding: 0 10px;
     margin: 0 auto;
-    @media (min-width: 481px) {
+    @media (min-width: $tablet) {
       width: 480px;
       display: flex;
       flex-wrap: wrap;
       box-sizing: border-box;
       padding: 0 5px;
     }
-    @media (min-width: 993px) {
+    @media (min-width: $desktop) {
       display: flex;
       width: 992px;
     }
@@ -35,12 +33,12 @@
     height: 457px;
     width: 257px;
     margin: 18px auto 0;
-    @media (min-width: 481px) {
+    @media (min-width: $tablet) {
       height: 457px;
       flex: 2;
       margin: 20px 10px;
     }
-    @media (min-width: 993px) {
+    @media (min-width: $desktop) {
       flex: 1 1;
       margin-bottom: 65px;
     }
@@ -50,12 +48,12 @@
     background-color: rgba(70, 48, 72, 0.84);
     transform: scale(1.1);
     margin: 45px 0;
-    @media (min-width: 481px) {
+    @media (min-width: $tablet) {
       margin-top: 20px;
       margin-right: 20px;
     }
 
-    @media (min-width: 993px) {
+    @media (min-width: $desktop) {
       margin: 20px 30px;
       transform: scale(1.2);
     }
@@ -101,7 +99,7 @@
     display: block;
     width: 60px;
     height: 5px;
-    background: #8D81AC;
+    background: $accentColor;
     margin: 38px auto ;
   }
 
@@ -147,7 +145,7 @@
 
 
   &__media {
-    @media (min-width: 481px) {
+    @media (min-width: $tablet) {
       margin-top: 55px;
     }
   }
