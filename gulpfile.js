@@ -27,12 +27,6 @@ const paths = {
     },
 };
 
-// const autoprefixer = () => (
-//     gulp.src('src/app.css')
-//
-//         .pipe(gulp.dest('dist'))
-// )
-
 const buildJS = () => (
     gulp.src(paths.src.js)
         .pipe(uglify())
