@@ -1,6 +1,8 @@
 .app-opportunities {
   &__bg {
+
     @media (min-width: 993px){
+      background: #F4F4F4;
       display: flex;
       justify-content: space-between;
       width: 100%;
@@ -28,6 +30,11 @@
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 120px;
+    @media (min-width: 481px){
+      font-weight: bold;
+      font-size: 42px;
+      line-height: 44px;
+    }
     @media (min-width: 993px){
       display: none;
     }
@@ -88,19 +95,24 @@
 
 
 .app-opportunities-example {
+  overflow: hidden;
+  @media (min-width: 993px){
+overflow:visible;
+  }
   &__title {display: none;
     @media (min-width: 993px){
       display: block;
       text-align: left;
       font-weight: bold;
-      font-size: 32px;
-      line-height: 38px;
+      font-size: 48px;
+      line-height: 50px;
       color: #8D81AC;
     }
   }
 
   &__img {
     margin-top: 64px;
+
     @media (min-width: 700px) {
       float: right;
     }

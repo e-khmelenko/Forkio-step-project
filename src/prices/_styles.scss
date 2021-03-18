@@ -34,7 +34,7 @@
     background-color: rgba(141, 129, 172, 0.23);
     height: 457px;
     width: 257px;
-    margin: 18px auto;
+    margin: 18px auto 0;
     @media (min-width: 481px) {
       height: 457px;
       flex: 2;
@@ -102,7 +102,7 @@
     width: 60px;
     height: 5px;
     background: #8D81AC;
-    margin: 38px auto;
+    margin: 38px auto ;
   }
 
   &__card-type-of-product {
@@ -135,10 +135,15 @@
     background-color: rgba(141, 129, 172, 0.15);
     border-radius: 47px;
     border: none;
+    outline: none;
+    cursor: pointer;
     padding: 15px 38px 15px 38px;
     @include MainFont;
 
   }
+
+
+
 
 
   &__media {

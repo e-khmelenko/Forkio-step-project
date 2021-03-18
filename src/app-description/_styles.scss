@@ -8,6 +8,16 @@
     text-align: center;
     margin-bottom: 36px;
     @include DescriptionFont;
+    @media (min-width: 481px){
+      font-weight: normal;
+      font-size: 21px;
+      line-height: 32px;
+    }
+    @media (min-width: 993px){
+      font-weight: normal;
+      font-size: 21px;
+      line-height: 32px;
+    }
 
   }
 
@@ -22,6 +32,16 @@
     color: #635C73;
     margin-top: 79px;
     margin-bottom: 27px;
+    @media (min-width: 481px){
+      font-weight: bold;
+      font-size: 42px;
+      line-height: 42px;
+    }
+    @media (min-width: 993px){
+      font-weight: bold;
+      font-size: 54px;
+      line-height: 54px;
+    }
   }
 }
 
