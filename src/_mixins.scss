@@ -1,8 +1,21 @@
-@mixin Lato{
-  font-family: 'Lato', sans-serif ;
+@mixin DescriptionFont{
+  font-family: 'DescriptionFont', sans-serif ;
 }
-@mixin Montserrat{
-  font-family: 'Montserrat', sans-serif ;
+@mixin MainFont{
+  font-family: 'MainFont', sans-serif ;
+}
+@mixin img-background{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin section-title{
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
 }
 @mixin btn{
   border-radius: 40px;

@@ -1,29 +1,24 @@
 .user-reviews {
   &__bg {
     background-image: url(../../dist/img/user-reviews/img/rocks.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    @include img-background;
+    background-color: #4B3B4E;
   }
 
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    @media (min-width: 481px) {
+    @media (min-width: $tablet) {
       grid-template-columns: 1fr 1fr;
     }
-    @media (min-width: 993px) {
+    @media (min-width: $desktop) {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
 
   &__title {
-    @include Montserrat;
-    font-size: 36px;
-    font-weight: bold;
-    line-height: 48px;
-    color: #fff;
-    text-align: center;
+    @include MainFont;
+    @include section-title;
 
     padding: 57px 0 53px 0;
   }
@@ -39,7 +34,7 @@
   }
 
   &__review-text {
-    @include Lato;
+    @include DescriptionFont;
     font-style: italic;
     font-size: 16px;
     font-weight: bold;
@@ -50,7 +45,7 @@
   }
 
   &__info {
-    @include Lato;
+    @include DescriptionFont;
     font-size: 14px;
     line-height: 21px;
     color: #A291A5;

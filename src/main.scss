@@ -1,6 +1,7 @@
 
 
 @import "_reset.scss";
+@import "_variables.scss";
 @import "_mixins.scss";
 
 @import "./header/_styles.scss";
@@ -18,18 +19,14 @@ a{
   box-sizing: border-box;
   padding: 0 10px;
   margin: 0 auto;
-  @media (min-width: 993px) {
+  @media (min-width: $desktop) {
     padding: 0 90px;
 
   }
-  @media (min-width: 1201px) {
+  @media (min-width: $ultraWide) {
     width: 1200px;
     padding: 0 90px;
 
   }
 
-  @media (min-width: 1201px){
-    width: 1200px;
-
-  }
 }

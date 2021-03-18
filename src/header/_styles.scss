@@ -1,4 +1,9 @@
 .hero {
+  &__bg {
+    background-color: #000;
+    @include MainFont;
+    text-align: center;
+  }
 
   &__nav {
     background-color: #27262A;
@@ -6,7 +11,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    @media (min-width: 993px) {
+    @media (min-width: $desktop) {
       flex-wrap: nowrap;
       background-color: #000;
     }
@@ -15,10 +20,12 @@
   &__logo {
     display: flex;
   }
-  &__logo:hover> .hero__logo-title{
+
+  &__logo:hover > .hero__logo-title {
     color: #fff;
   }
-  &__logo:hover> .hero__logo-img{
+
+  &__logo:hover > .hero__logo-img {
     fill: #fff;
   }
 
@@ -28,54 +35,49 @@
     font-weight: bold;
     line-height: 16px;
     text-transform: uppercase;
-    color: #8D81AC;
+    color: $accentColor;
     margin-left: 17px;
     align-self: center;
-    @media (min-width: 480px) {
+    @media (min-width: $tablet) {
       display: inline;
     }
   }
 
 
-  &__bg {
+  &__bg-img {
     background-image: url(../../dist/img/header/img/laptop.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    @include img-background;
   }
 
   &__title {
-
-    color: #fff;
+    @include section-title;
     font-size: 48px;
-    font-weight: bold;
     line-height: 48px;
 
     padding-top: 50px;
-    @media (min-width: 480px) {
+    @media (min-width: $tablet) {
       font-size: 72px;
       line-height: 72px;
     }
-    @media (min-width: 993px) {
+    @media (min-width: $desktop) {
       font-size: 82px;
       line-height: 82px;
     }
-
   }
 
   &__subtitle {
     font-size: 18px;
     line-height: 24px;
-    color: #8D81AC;
+    color: $accentColor;
 
     padding-top: 19px;
 
-    @media (min-width: 480px) {
+    @media (min-width: $tablet) {
       font-size: 24px;
-      @include Lato;
+      @include DescriptionFont;
 
     }
-    @media (min-width: 993px) {
+    @media (min-width: $desktop) {
       font-size: 30px;
       line-height: 30px;
     }
@@ -84,10 +86,10 @@
   &__version {
     font-size: 14px;
     line-height: 14px;
-    color: #848E97;
+    color: $greyTextColor;
     text-transform: uppercase;
     padding-top: 14px;
-    @media (min-width: 993px) {
+    @media (min-width: $desktop) {
       font-size: 16px;
       line-height: 16px;
     }
@@ -96,20 +98,10 @@
   &__trial {
     font-size: 14px;
     line-height: 14px;
-    color: #848E97;
+    color: $greyTextColor;
 
-    margin-top: 48px;
-  }
-
-  @include Montserrat;
-  text-align: center;
-
-}
-
-.breakpoint {
-  display: none;
-  @media (min-width: 480px) {
-    display: block;
+    padding-top: 48px;
+    background-color: #fff;
   }
 }
 
@@ -120,21 +112,21 @@
     left: calc(50% - 292px / 2);
     top: -100vh;
     transition: all 300ms ease-in-out;
-    @media (min-width: 480px) {
+    @media (min-width: $tablet) {
       position: inherit;
       width: 100%;
       display: flex;
       justify-content: center;
     }
-    @media (min-width: 993px) {
+    @media (min-width: $desktop) {
       order: 2;
       width: auto;
     }
   }
 
   &__active {
-    position: fixed;
-    top: 103px;
+    position: absolute;
+    top: 106px;
   }
 
   &__item {
@@ -143,30 +135,30 @@
     text-align: start;
     background-color: #333333;
     padding: 29px 0 21px 35px;
-    @include Montserrat;
+    @include MainFont;
     color: #fff;
     font-size: 26px;
     line-height: 26px;
     border-bottom: 2px solid #3b3b3b;
-    @media (min-width: 480px) {
+    @media (min-width: $tablet) {
       font-size: 16px;
       font-weight: bold;
       line-height: 18px;
-      color: #8D81AC;
+      color: $accentColor;
 
       padding: 0 0 18px 29px;
       background-color: transparent;
       border: none;
     }
-    @media (min-width: 993px){
+    @media (min-width: $desktop) {
       padding: 0;
       margin-left: 20px;
     }
   }
 
   &__item:hover {
-    color: #8D81AC;
-    @media (min-width: 480px) {
+    color: $accentColor;
+    @media (min-width: $tablet) {
       color: #fff;
       cursor: pointer;
     }
@@ -180,8 +172,8 @@
     top: calc(40px - 50px / 2);
     width: 8px;
     height: 50px;
-    background-color: #8D81AC;
-    @media (min-width: 480px) {
+    background-color: $accentColor;
+    @media (min-width: $tablet) {
       display: none;
     }
   }
@@ -194,13 +186,13 @@
     margin: 34px 0 32px 0;
     font-size: 15px;
     line-height: 15px;
-    @media (min-width: 480px) {
+    @media (min-width: $tablet) {
       position: relative;
       font-size: 16px;
       line-height: 16px;
       padding: 11px 40px;
     }
-    @media (min-width: 993px) {
+    @media (min-width: $desktop) {
       //justify-self: stretch;
       order: 3;
     }
@@ -219,7 +211,7 @@
     top: 23px;
   }
 
-  @include Montserrat;
+  @include MainFont;
 }
 
 .hamburger {
@@ -230,7 +222,7 @@
     border: none;
     outline: none;
     padding: 0;
-    @media (min-width: 480px) {
+    @media (min-width: $tablet) {
       display: none;
     }
   }

@@ -13,7 +13,7 @@
     <title>Forkio</title>
 </head>
 <body>
-<header class="hero">
+<header class="hero__bg">
     <div class="hero__nav container">
         <a href="#" class="hero__logo">
             <svg class="hero__logo-img" xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,6 @@
             <h1 class="hero__logo-title">Forkio</h1>
         </a>
         <button class="btn__buy-now">Buy Now</button>
-<!--        <div class="breakpoint" style="flex-basis: 100%; height: 0;"></div>-->
         <button class="hamburger__icon">
             <span class="hamburger__line"></span>
         </button>
@@ -36,7 +35,7 @@
         </ul>
     </div>
 
-    <div class="hero__bg container">
+    <div class="hero__bg-img container">
         <h1 class="hero__title">Fork App</h1>
         <p class="hero__subtitle">A Real Gamechanger In The World Of Web-Development</p>
         <p class="hero__version">v. 2.8 For Mac and Windows</p>
@@ -48,7 +47,8 @@
 <main class="page">
     <section class="app-description container">
         <h2 class="app-description__title">Revolutionary editor</h2>
-        <p class="app-description__description">Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue.</p>
+        <p class="app-description__description">Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet
+            vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue.</p>
         <div class="btn__contacts">
             <button class="btn__icon"><img src="dist/img/app-description/img/eye.png" alt="pic" class="btn__img"> Watch
                 <span class="btn__number">1,397</span>
@@ -63,55 +63,61 @@
     </section>
 
 
-    <section class="app-opportunities__bg">
-        <div class="app-opportunities__wrapper">
+    <section class="app-opportunities__bg ">
+        <div class="container app-opportunities__container">
+            <div class="app-opportunities__wrapper ">
 
 
-            <h3 class="card__title-head"><span><</span>Here is what you get<span>></span></h3>
-            <div class="card">
-                <img src="dist/img/app-opportunities/img/webpage.png" alt="pic" class="card__img">
-                <div class="card__content ">
-                    <h3 class="card__title">Created to Make The Web Better</h3>
-                    <p class="card__description">Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet
-                        vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue.</p>
+                <h3 class="card__title-head">&lt;Here is what you get&gt;</h3>
+                <div class="card">
+                    <img src="dist/img/app-opportunities/img/webpage.png" alt="pic" class="card__img">
+                    <div class="card__content ">
+                        <h3 class="card__title">Created to Make The Web Better</h3>
+                        <p class="card__description">Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui
+                            laoreet
+                            vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="dist/img/app-opportunities/img/counter.png" alt="pic" class="card__img">
+                    <div class="card__content ">
+                        <h3 class="card__title">Incredibly Powerful Tool</h3>
+                        <p class="card__description">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis
+                            odio,
+                            ut
+                            volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat
+                            volutpat.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="dist/img/app-opportunities/img/bottle.png" alt="pic" class="card__img">
+                    <div class="card__content ">
+                        <h3 class="card__title ">Experimental Stuff</h3>
+                        <p class="card__description">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis
+                            odio,
+                            ut
+                            volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat
+                            volutpat.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="dist/img/app-opportunities/img/watch.png" alt="pic" class="card__img">
+                    <div class="card__content ">
+                        <h3 class="card__title">Created to Make The Web Better</h3>
+                        <p class="card__description">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis
+                            odio,
+                            ut
+                            volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat
+                            volutpat.</p>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="dist/img/app-opportunities/img/counter.png" alt="pic" class="card__img">
-                <div class="card__content ">
-                    <h3 class="card__title">Incredibly Powerful Tool</h3>
-                    <p class="card__description">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio,
-                        ut
-                        volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat
-                        volutpat.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="dist/img/app-opportunities/img/bottle.png" alt="pic" class="card__img">
-                <div class="card__content ">
-                    <h3 class="card__title ">Experimental Stuff</h3>
-                    <p class="card__description">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio,
-                        ut
-                        volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat
-                        volutpat.</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="dist/img/app-opportunities/img/watch.png" alt="pic" class="card__img">
-                <div class="card__content ">
-                    <h3 class="card__title">Creatred to Make The Web Better</h3>
-                    <p class="card__description">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio,
-                        ut
-                        volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat
-                        volutpat.</p>
-                </div>
-            </div>
-        </div>
 
 
-        <div class="app-opportunities-example clear">
-            <h2 class="app-opportunities-example__title"><span><</span>Here is what you get<span>></span></h2>
-            <img src="dist/img/app-opportunities/img/editor.png" alt="pic" class="app-opportunities-example__img">
+            <div class="app-opportunities-example clear">
+                <h3 class="app-opportunities-example__title">&lt;Here is what you get&gt;</h3>
+                <img src="dist/img/app-opportunities/img/editor.png" alt="pic" class="app-opportunities-example__img">
+            </div>
         </div>
     </section>
 
@@ -121,35 +127,35 @@
             <h2 class="user-reviews__title">People Are Talking About Fork</h2>
             <div class="user-reviews__wrapper">
                 <div class="user-reviews__card">
-                    <img src="dist/img/user-reviews/img/tittles/smashing_magazine.png" alt=""
+                    <img src="dist/img/user-reviews/img/titles/smashing_magazine.png" alt=""
                          class="user-reviews__img-title">
                     <p class="user-reviews__review-text">Sed vestibulum scelerisque urna, eu finibus leo facilisis sit
                         amet. Proin id dignissim magna. Sed varius urna et pulvinar venenatis. </p>
                 </div>
                 <div class="user-reviews__card">
-                    <img src="dist/img/user-reviews/img/tittles/codrops.png" alt="" class="user-reviews__img-title">
+                    <img src="dist/img/user-reviews/img/titles/codrops.png" alt="" class="user-reviews__img-title">
                     <p class="user-reviews__review-text">Donec euismod dolor ut ultricies consequat. Vivamus urna ipsum,
                         rhoncus molestie neque ac, mollis eleifend nibh.</p>
                 </div>
                 <div class="user-reviews__card">
-                    <img src="dist/img/user-reviews/img/tittles/W.png" alt="" class="user-reviews__img-title">
+                    <img src="dist/img/user-reviews/img/titles/W.png" alt="" class="user-reviews__img-title">
                     <p class="user-reviews__review-text">In efficitur in velit et tempus. Duis nec odio dapibus,
                         suscipit erat fringilla, imperdiet nibh. Morbi tempus auctor felis ac vehicula. </p>
                 </div>
                 <div class="user-reviews__card">
-                    <img src="dist/img/user-reviews/img/tittles/pixel_buddha.png" alt=""
+                    <img src="dist/img/user-reviews/img/titles/pixel_buddha.png" alt=""
                          class="user-reviews__img-title">
                     <p class="user-reviews__review-text">Sed vestibulum scelerisque urna, eu finibus leo facilisis sit
                         amet. Proin id dignissim magna. Sed varius urna et pulvinar venenatis. </p>
                 </div>
                 <div class="user-reviews__card">
-                    <img src="dist/img/user-reviews/img/tittles/creative_bloq.png" alt=""
+                    <img src="dist/img/user-reviews/img/titles/creative_bloq.png" alt=""
                          class="user-reviews__img-title">
                     <p class="user-reviews__review-text">Praesent ut eros tristique, malesuada lectus vel, lobortis
                         massa. Nulla faucibus lorem id arcu consequat faucibus. </p>
                 </div>
                 <div class="user-reviews__card">
-                    <img src="dist/img/user-reviews/img/tittles/TNW.png" alt="" class="user-reviews__img-title">
+                    <img src="dist/img/user-reviews/img/titles/TNW.png" alt="" class="user-reviews__img-title">
                     <p class="user-reviews__review-text">Fusce pharetra erat id odio blandit, nec pharetra eros
                         venenatis. Pellentesque porttitor cursus massa et vestibulum.</p>
                 </div>

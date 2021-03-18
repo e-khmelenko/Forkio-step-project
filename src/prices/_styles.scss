@@ -1,23 +1,27 @@
 .prices {
   &__bg {
     background-image: url("../../dist/img/prices/img/bg-price.png");
-    width: 100%;
-    background-size: cover;
+    @include img-background;
+  }
 
+  &__title {
+    @include section-title;
+    @include MainFont;
+    padding: 82px 0 112px 0;
   }
 
   &__card-wrapper {
     width: 257px;
     padding: 0 10px;
     margin: 0 auto;
-    @media (min-width: 481px) {
+    @media (min-width: $tablet) {
       width: 480px;
       display: flex;
       flex-wrap: wrap;
       box-sizing: border-box;
       padding: 0 5px;
     }
-    @media (min-width: 993px) {
+    @media (min-width: $desktop) {
       display: flex;
       width: 992px;
     }
@@ -28,13 +32,13 @@
     background-color: rgba(141, 129, 172, 0.23);
     height: 457px;
     width: 257px;
-    margin: 18px auto;
-    @media (min-width: 481px) {
+    margin: 18px auto 0;
+    @media (min-width: $tablet) {
       height: 457px;
       flex: 2;
       margin: 20px 10px;
     }
-    @media (min-width: 993px) {
+    @media (min-width: $desktop) {
       flex: 1 1;
       margin-bottom: 65px;
     }
@@ -44,22 +48,22 @@
     background-color: rgba(70, 48, 72, 0.84);
     transform: scale(1.1);
     margin: 45px 0;
-    @media (min-width: 481px) {
+    @media (min-width: $tablet) {
       margin-top: 20px;
       margin-right: 20px;
     }
 
-    @media (min-width: 993px) {
+    @media (min-width: $desktop) {
       margin: 20px 30px;
       transform: scale(1.2);
     }
   }
 
   &__card-title {
+    @include MainFont;
     color: #FFFFFF;
     font-size: 24px;
     line-height: 24px;
-    @include Montserrat;
     text-align: center;
     background-color: rgba(141, 129, 172, 0.23);
     padding: 36px 0;
@@ -72,7 +76,7 @@
     display: block;
     text-align: center;
     text-transform: uppercase;
-    @include Montserrat;
+    @include MainFont;
     color: #FFFFFF;
     font-size: 60px;
     line-height: 62px;
@@ -87,7 +91,7 @@
     line-height: 16px;
     color: #FFFFFF;
     margin-top: 20px;
-    @include Montserrat;
+    @include MainFont;
   }
 
   &__card-validity:after {
@@ -95,8 +99,8 @@
     display: block;
     width: 60px;
     height: 5px;
-    background: #8D81AC;
-    margin: 38px auto;
+    background: $accentColor;
+    margin: 38px auto ;
   }
 
   &__card-type-of-product {
@@ -107,7 +111,7 @@
     display: block;
     font-style: normal;
     font-weight: normal;
-    @include Montserrat;
+    @include MainFont;
     margin-bottom: 37px;
     padding: 0 13px;
 
@@ -129,14 +133,19 @@
     background-color: rgba(141, 129, 172, 0.15);
     border-radius: 47px;
     border: none;
+    outline: none;
+    cursor: pointer;
     padding: 15px 38px 15px 38px;
-    @include Montserrat;
+    @include MainFont;
 
   }
 
 
+
+
+
   &__media {
-    @media (min-width: 481px) {
+    @media (min-width: $tablet) {
       margin-top: 55px;
     }
   }
