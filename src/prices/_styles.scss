@@ -6,6 +6,12 @@
 
   }
 
+  &__title {
+    @include section-title;
+    @include MainFont;
+    padding: 82px 0 112px 0;
+  }
+
   &__card-wrapper {
     width: 257px;
     padding: 0 10px;
@@ -56,10 +62,10 @@
   }
 
   &__card-title {
+    @include MainFont;
     color: #FFFFFF;
     font-size: 24px;
     line-height: 24px;
-    @include Montserrat;
     text-align: center;
     background-color: rgba(141, 129, 172, 0.23);
     padding: 36px 0;
@@ -72,7 +78,7 @@
     display: block;
     text-align: center;
     text-transform: uppercase;
-    @include Montserrat;
+    @include MainFont;
     color: #FFFFFF;
     font-size: 60px;
     line-height: 62px;
@@ -87,7 +93,7 @@
     line-height: 16px;
     color: #FFFFFF;
     margin-top: 20px;
-    @include Montserrat;
+    @include MainFont;
   }
 
   &__card-validity:after {
@@ -107,7 +113,7 @@
     display: block;
     font-style: normal;
     font-weight: normal;
-    @include Montserrat;
+    @include MainFont;
     margin-bottom: 37px;
     padding: 0 13px;
 
@@ -130,7 +136,7 @@
     border-radius: 47px;
     border: none;
     padding: 15px 38px 15px 38px;
-    @include Montserrat;
+    @include MainFont;
 
   }
 

@@ -65,7 +65,7 @@
     text-align: center;
     margin-top: 27px;
     margin-bottom: 14px;
-    @include Montserrat;
+    @include MainFont;
     @media (min-width: 481px) {
       text-align: left;
       margin-left: 20px;

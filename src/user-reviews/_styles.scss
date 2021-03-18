@@ -18,12 +18,8 @@
   }
 
   &__title {
-    @include Montserrat;
-    font-size: 36px;
-    font-weight: bold;
-    line-height: 48px;
-    color: #fff;
-    text-align: center;
+    @include MainFont;
+    @include section-title;
 
     padding: 57px 0 53px 0;
   }
@@ -39,7 +35,7 @@
   }
 
   &__review-text {
-    @include Lato;
+    @include DescriptionFont;
     font-style: italic;
     font-size: 16px;
     font-weight: bold;
@@ -50,7 +46,7 @@
   }
 
   &__info {
-    @include Lato;
+    @include DescriptionFont;
     font-size: 14px;
     line-height: 21px;
     color: #A291A5;

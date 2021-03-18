@@ -7,22 +7,12 @@
     color: #323232;
     text-align: center;
     margin-bottom: 36px;
-    @include Lato;
+    @include DescriptionFont;
 
   }
-
-  &__trial {
-    font-size: 14px;
-    line-height: 14px;
-    color: #848E97;
-    text-align: center;
-    @include Montserrat;
-
-  }
-
 
   &__title {
-    @include Montserrat;
+    @include MainFont;
     font-weight: bold;
     font-size: 26px;
     line-height: 28px;
